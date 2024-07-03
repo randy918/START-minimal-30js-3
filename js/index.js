@@ -1,23 +1,20 @@
 
 //_ ████████████████████████████████████  FUNCTIONS
 
-function setDate() {
-    const now = new Date();
-    const seconds = now.getSeconds();
-    const secondDegrees = (seconds / 60) * 360;
-    secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+function handleUpdate()  {
+const suffix = this.dataset.sizing || '';
+document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 
-
-    console.log(seconds);
 
 }
 
 //_$ ████████████████████████████████████  QUERY SELECTORS
 
-const secondHand = document.querySelector('.second-hand');
-const minuteHand = document.querySelector('.minute-hand');
-const hourHand = document.querySelector('.hour-hand');
+const inputs = document.querySelectorAll('.controls input');
+
+//^ ████████████████████████████████████  EVENT LISTENERS
+
+inputs.forEach(input => input.addEventListener('change', handleUpdate));
+inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
 //>  ████████████████████████████████████  REAL PROGRAM
-
-setInterval(setDate, 1000);

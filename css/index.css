@@ -21,4 +21,27 @@ html {
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+.hl {
+  color: var(--base);
+}
+
+.controls {
+  margin-bottom: 5rem;
+}
+
+a {
+  color: var(--base);
+  text-decoration: none;
+}
+
+input {
+  width: 10rem;
 }/*# sourceMappingURL=index.css.map */

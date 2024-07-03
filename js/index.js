@@ -37,6 +37,20 @@ const inventors = [
 
 //>  ████████████████████████████████████  REAL PROGRAM
 
-const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year <= 1600); // makes new array
+//! ████████████████████████████████████  FILTER array example
+
+const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year <= 1600);
 
 console.table(fifteen);
+
+//! ████████████████████████████████████  MAP array example
+
+const fullNames = inventors.map(inventor => inventor.first + ' ' + inventor.last); 
+
+console.table(fullNames);
+
+//! ████████████████████████████████████  SORT array example
+
+const birthdateList = inventors.sort((a, b) => a.year-b.year);
+
+console.table(birthdateList);

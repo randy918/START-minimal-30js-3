@@ -56,7 +56,7 @@ const years = inventors.reduce((total, inventor) => total + (inventor.passed - i
 
 console.log(years);
 
-//! ████████████████████████████████████  sort inventors by years lived
+//! ████████████████████████████████████  SORT inventors by years lived
 
 const sortedYears = inventors.sort((a, b) => {
 
@@ -67,3 +67,7 @@ const sortedYears = inventors.sort((a, b) => {
 });
 
 console.table(sortedYears);
+
+//! ████████████████████████████████████  SORT alpha by last name
+
+

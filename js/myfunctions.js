@@ -59,7 +59,7 @@ function r(min, max) {
   const randomNumber = min - 1 + Math.ceil(Math.random() * (max + 1 - min));
   return randomNumber;
 }
-// may not be a real function
+// 000000.0000 format
 function getTime() {
   var today = new Date();
   var codeMonth = today.getMonth() + 1;
@@ -121,7 +121,7 @@ function getAmPm() {
   let amPm = "am";
   const today = new Date();
   let codeHour = today.getHours();
-  if (codeHour > 12) {
+  if (codeHour > 11) {
     amPm = "pm";
   }
   return amPm;
@@ -162,7 +162,7 @@ function getDayVerbal() {
 
 function getDay00() {
   const today = new Date();
-  const codeDay = today.getDate();
+  let codeDay = today.getDate();
   if (codeDay < 10) {
     codeDay = "0" + codeDay;
   }
@@ -183,7 +183,7 @@ function getMonthVerbal() {
 
 function getMonth00() {
   const today = new Date();
-  const codeMonth = today.getMonth() + 1;
+  let codeMonth = today.getMonth() + 1;
   if (codeMonth < 10) {
     codeMonth = "0" + codeMonth;
   }
@@ -198,7 +198,7 @@ function getMonth() {
 
 function getYear00() {
   const today = new Date();
-  const codeYear = today.getYear() - 100;
+  let codeYear = today.getYear() - 100;
   if (codeYear < 10) {
     codeMYear = "0" + codeYear;
   }
